@@ -219,13 +219,6 @@ The implementation consists of projection matrix which converts the points from 
 
 ![step3_graph](images/rmse_tracking.png)
 
-## Difficulties Faced in Project
-
-The implementation of ekf, track management, data association, and camera-lidar fusion are all well guided in the lectures. However it was difficult to implement the camera measuring model. When projecting a 3d point into a 2d point, there are transformations in the camera axis. However, the coding of the project was discovered and the problem was solved.For the project, a pre-computed result is needed. However, the pre-computed result files do not correspond to the load filename of the loop_over_dataset.py file. For using the files, we  modified the filenames according to the pre-computed result. This is shown in the following lines in the "loop_over_dataset.py " file.
-
-![image](images/measure_detection.PNG)
-Fig: modified loop_over_dataset for pre-computed result
-
 ## Benefits in Camera-Lidar Fusion tracking over Lidar-only tracking
 
 From the project, it is understandable that for a stabilized tracking, sensor fusion should combine multiple sensors. Cameras may offer textured and color/brightness/contrast based imaages that Lidar does not provide .Lidar is extremely beneficial for low brightness /visibility or in blurry conditions such as foggy/rainy weather conditions.The most important aspect of Lidar is the spatial projection which is better than a camera.Lidar can seemlessly navigate to the required orientation. Ideally a combined approach of Resnet architectures combined with Lidar can provide better results. Inclusion of camera fusion trackign can produce a better geometric project matrix for the sensors to detect and operate on.
@@ -240,9 +233,4 @@ A sensor-fusion systemcould be confronted with a variety of real-world issues su
 This project eliminates the issue of extrinsic parameter tuning, which is one method for camera and 
 LiDAR fusion. These extrinsic parameters are defined since we are using a public dataset for this 
 experiment.
-
-## Improvement opportunity:
-
-As already stated, the project should carry out the Camera-LiDAR Fusion Monitoring. And also, A 3D measuring model of the real camera sound can assist with the fusion effect, we can fit actual 3d points in the lidar point cloud to the vehicle target pixels.It is best suited to use a camera sound for providing individual noise variances and also for better projection matrix creation.
-
 
